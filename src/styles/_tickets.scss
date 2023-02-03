@@ -1,0 +1,151 @@
+@use 'colors';
+@import 'variables';
+
+.tickets {
+    background-color: colors.$bgTicketSection;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 5vw;
+        font-size: 2vw;
+    }
+}
+
+.tab {
+    background-color: darken(colors.$bgTicketSection, 5%);
+    border-radius: 16px;
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2vw;
+
+        .tabButton{
+            padding: 16px;
+            margin-right: 32px;
+            font-size: 18px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            background-color: colors.$tabButtonBgColor;
+
+            &--is-active {
+                background-color: colors.$tabButtonBgColor--Active;
+            }
+        }
+    }
+
+    &__content {
+        .ticketDate {
+            display: none;
+
+            &--is-active {
+                display: block;
+            }
+        }
+
+        &__line_breaker {
+            @include lineBreaker;
+
+            &_li {
+                @include lineBreaker;
+                margin: 0 auto;
+                margin-top: 40px;
+                margin-bottom: 64px;
+            }
+        }
+
+        &__buyTicket {
+            background-color: darken(colors.$bgTicketSection, 10%);
+            margin: 0 4vw;
+
+            &_header {
+                display: flex;
+                justify-content: space-between;
+                background-color: darken(colors.$bgTicketSection, 15%);
+                padding: 16px;
+
+                h2 {
+                    padding-top: 8px;
+                }
+
+                a {
+                    color: colors.$textColor;
+                    text-decoration: none;
+                    background-color: colors.$headerLinkBg;
+                    padding: 8px;
+                    border-radius: 8px;
+
+                    &:hover {
+                        color: colors.$linkTextColor;
+                        background-color: colors.$headerLinkBg--hover
+                    }
+                }
+            }
+
+            &_body {
+                display: flex;
+                justify-content: space-between;
+                padding: 16px;
+
+                &:last-child {
+                    padding-bottom: 24px;
+                }
+
+                .buyTicketTitle  {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+
+                    span {
+                        margin-left: 16px;
+                    }
+
+                    p {
+                        border: 2px solid colors.$ticketTextBorderColor;
+                        margin: -6px;
+                        padding: 6px;
+
+                        &:hover {
+                            border-color: colors.$ticketTextBorderColor--hover;
+                        }
+                    }
+                }
+
+                .buyTicketType {
+                    &__screenType {
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        padding: 8px;
+                        border-radius: 4px;
+                        margin-right: 8px;
+
+                        &--dub {
+                            background-color: colors.$ticketTypeBorderColorDub;
+                        }
+
+                        &--sub {
+                            background-color: colors.$ticketTypeBorderColorSub;
+                        }
+
+                        &--2d {
+                            background-color: colors.$ticketTypeBorderColor2D;
+                        }
+
+                        &--3d {
+                            background-color: colors.$ticketTypeBorderColor2D;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

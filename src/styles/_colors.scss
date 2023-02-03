@@ -1,0 +1,27 @@
+$bgBlurColor: rgba(59, 17, 17, 0.5);
+
+$textColor: #fff;
+
+// Tickets Section
+
+    // Button
+    $tabButtonBgColor: rgb(150, 143, 143);
+    $tabButtonBgColor--Active: darken(rgb(196, 58, 58), 15%);
+
+    // Header link
+    $headerLinkBg: rgb(114, 113, 113);
+    $headerLinkBg--hover: lighten($headerLinkBg, 40%);
+    $linkTextColor: darken($textColor, 80%);
+
+    // Background Color of the section
+    $bgTicketSection: rgb(80, 79, 79);
+
+    // Time of movie session
+    $ticketTextBorderColor: #ccc;
+    $ticketTextBorderColor--hover: darken($ticketTextBorderColor, 40%);
+
+    // Type of the session
+    $ticketTypeBorderColorDub: rgb(150, 149, 149);
+    $ticketTypeBorderColorSub: darken($ticketTypeBorderColorDub, 15%);
+    $ticketTypeBorderColor2D: rgba(226, 106, 76, 0.867);
+    $ticketTypeBorderColor3D: darken($ticketTypeBorderColor2D, 5%);

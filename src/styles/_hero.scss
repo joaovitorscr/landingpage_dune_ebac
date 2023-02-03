@@ -1,0 +1,102 @@
+@use 'colors';
+@use 'variables';
+
+.hero {
+    position: absolute;
+
+    &__background {
+        background-image: url(../../dist/images/dune_background.jpg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+
+        &--blur {
+            background: colors.$bgBlurColor;
+            backdrop-filter: blur(4px);
+            height: 100vh;
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        width: 20%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    &__content {
+        margin-top: 13vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &__info {
+            text-align: center;
+            margin-left: 2vw;
+
+            &__title {
+                font-size: 48px;
+            }
+
+            &__subtitle {
+                font-size: 22px;
+            }
+
+            &__synopse {
+                padding-top: 8px;
+                padding-bottom: 16px;
+            }
+
+            &__producers {
+                &__title {
+                    font-size: 22px;
+                    padding-bottom: 8px;
+                }
+
+                &__subtitle {
+                    padding-top: 8px;
+                    padding-bottom: 2px;
+                    font-size: 20px;
+                }
+
+                &__content {
+                    padding-bottom: 8px;
+                }
+            }
+        }
+
+        &__reviews {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 16px;
+            row-gap: 16px;
+            margin-left: 5vw;
+            margin-right: 2vw;
+
+            &__title {
+                font-size:  38px;
+                font-weight: 800;
+                text-align: center;
+            }
+
+            &__name {
+                font-size: 24px;
+                padding-bottom: 2px;
+                font-weight: 700;
+            }
+
+            &__content {
+                font-weight: 400;
+                padding-bottom: 8px;
+            }
+
+            &__rating {
+                font-size: 22px;
+            }
+
+        }
+    }
+}
