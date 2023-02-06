@@ -33,7 +33,7 @@
         }
 
         @include phone() {
-            width: 80%;
+            width: 40%;
         }
         
     }
@@ -48,7 +48,7 @@
         }
 
         @include phone() {
-            margin-top: 30vw;
+            margin-top: 13vw;
         }
 
         &__info {
@@ -146,7 +146,7 @@
                 padding-bottom: 8px;
 
                 @include phone() {
-                    font-size: 12px;
+                    font-size: 10px;
                 }
             }
 
