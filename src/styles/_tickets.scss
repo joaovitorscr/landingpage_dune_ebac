@@ -15,6 +15,16 @@
         text-align: center;
         margin-bottom: 5vw;
         font-size: 2vw;
+
+        @include tablet() {
+            font-size: 4vw;
+        }
+
+        @include phone() {
+            font-size: 5vw;
+            margin-top: 4vw;
+            margin-bottom: 10vw;
+        }
     }
 }
 
@@ -24,10 +34,27 @@
     padding-top: 2vw;
     padding-bottom: 4vw;
 
+    @include tablet() {
+        padding-top: 4vw;
+    }
+
+    @include phone() {
+        padding-top: 8vw;
+    }
+
     &__buttons {
         display: flex;
         justify-content: center;
         padding-bottom: 2vw;
+
+        @include tablet() {
+            padding-bottom: 4vw;
+        }
+
+
+        @include phone() {
+            padding-bottom: 8vw;
+        }
 
         .tabButton{
             padding: 16px;
@@ -37,6 +64,11 @@
             border: none;
             cursor: pointer;
             background-color: colors.$tabButtonBgColor;
+
+
+            @include phone() {
+                font-size: 12px;
+            }
 
             &--is-active {
                 background-color: colors.$tabButtonBgColor--Active;
@@ -76,6 +108,10 @@
 
                 h2 {
                     padding-top: 8px;
+
+                    @include phone() {
+                        font-size: 12px;
+                    }
                 }
 
                 a {
@@ -84,6 +120,10 @@
                     background-color: colors.$headerLinkBg;
                     padding: 8px;
                     border-radius: 8px;
+
+                    @include phone() {
+                        font-size: 12px;
+                    }
 
                     &:hover {
                         color: colors.$linkTextColor;
@@ -105,6 +145,12 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
 
+                    h5 {
+                        @include phone() {
+                            font-size: 16px;
+                        }
+                    }
+
                     span {
                         margin-left: 16px;
                     }
@@ -113,6 +159,10 @@
                         border: 2px solid colors.$ticketTextBorderColor;
                         margin: -6px;
                         padding: 6px;
+
+                        @include phone() {
+                            font-size: 12px;
+                        }
 
                         &:hover {
                             border-color: colors.$ticketTextBorderColor--hover;

@@ -1,5 +1,6 @@
 @use 'colors';
 @use 'variables';
+@import 'variables';
 
 .hero {
     position: absolute;
@@ -26,6 +27,15 @@
         left: 0;
         right: 0;
         margin: 0 auto;
+
+        @include tablet() {
+            width: 40%;
+        }
+
+        @include phone() {
+            width: 80%;
+        }
+        
     }
 
     &__content {
@@ -33,27 +43,55 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        @include tablet() {
+            margin-top: 18vw;
+        }
+
+        @include phone() {
+            margin-top: 30vw;
+        }
+
         &__info {
             text-align: center;
             margin-left: 2vw;
 
             &__title {
                 font-size: 48px;
+
+                @include phone() {
+                    font-size: 28px;
+                }
             }
 
             &__subtitle {
                 font-size: 22px;
+
+                @include tablet() {
+                    font-size: 18px;
+                }
+
+                @include phone() {
+                    font-size: 12px;
+                }
             }
 
             &__synopse {
                 padding-top: 8px;
                 padding-bottom: 16px;
+
+                @include phone() {
+                    font-size: 12px;
+                }
             }
 
             &__producers {
                 &__title {
                     font-size: 22px;
                     padding-bottom: 8px;
+
+                    @include phone() {
+                        font-size: 18px;
+                    }
                 }
 
                 &__subtitle {
@@ -64,37 +102,61 @@
 
                 &__content {
                     padding-bottom: 8px;
+
+
+                    @include phone() {
+                        font-size: 12px;
+                    }
                 }
             }
         }
 
         &__reviews {
-            display: grid;
-            grid-template-columns: 1fr;
-            column-gap: 16px;
-            row-gap: 16px;
             margin-left: 5vw;
             margin-right: 2vw;
+
+            @include phone() {
+                display: block;
+                padding-bottom: 8px;
+            }
 
             &__title {
                 font-size:  38px;
                 font-weight: 800;
                 text-align: center;
+
+                @include phone() {
+                    font-size: 18px;
+                    padding-bottom: 2vw;
+                }
             }
 
             &__name {
                 font-size: 24px;
                 padding-bottom: 2px;
                 font-weight: 700;
+
+                @include phone() {
+                    font-size: 12px;
+                }
             }
 
             &__content {
                 font-weight: 400;
                 padding-bottom: 8px;
+
+                @include phone() {
+                    font-size: 12px;
+                }
             }
 
             &__rating {
                 font-size: 22px;
+
+                @include phone() {
+                    font-size: 12px;
+                    padding-bottom: 8px;
+                }
             }
 
         }
